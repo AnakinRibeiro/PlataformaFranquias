@@ -1,0 +1,83 @@
+.bannerTitulo div .materiaisTit {
+  width: 15rem;
+}
+
+.bannerTitulo .bannerTituloInner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bannerTitulo .opcoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.bannerTitulo .opcoes span {
+  color: white;
+  margin-left: 1rem;
+}
+
+.bannerTitulo .opcoes h1 {
+  font-size: 1.3rem;
+}
+
+.apresentacoes {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.apresentacoes .novaApresentacao {
+  padding-right: 3rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.apresentacoes .novaApresentacao .btn-novoManual {
+  display: flex;
+  color: #fff;
+  width: 3rem;
+  height: 2.5rem;
+  background: #00617c;
+  border: 0px;
+  border-radius: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.apresentacoes .apresentacoesInner {
+  margin-top: 2rem;
+  width: 100%;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 2rem;
+  grid-column-gap: 0.1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 4rem;
+}
+
+.apresentacoes .apresentacoesInner .apresentacao {
+  background-image: linear-gradient(to right, #00617c, #011d2c);
+  color: #fff;
+  font-size: 1.1rem;
+  width: 20rem;
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.apresentacoes .apresentacoesInner .apresentacao i {
+  margin-left: 0.5rem;
+  color: #c29d5e;
+}

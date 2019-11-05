@@ -1,0 +1,157 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, #00617c, #011d2c);
+  padding: 0.7rem 5rem;
+}
+
+.navbar .esq {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 3rem;
+}
+
+.navbar .esq img {
+  width: 130px;
+}
+
+.navbar .esq h1 {
+  font-weight: 500;
+  color: #fff;
+  margin-left: 3rem;
+  font-size: 1.1rem;
+}
+
+.navbar .dir {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 3rem;
+}
+
+.navbar .dir .fa-bell {
+  margin-right: 2rem;
+  color: #fff;
+}
+
+.navbar .dir .logout {
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+  height: 2rem;
+  background: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid #c29d5e;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.navbar .dir .logout i {
+  color: #c29d5e;
+  margin-right: 0.3rem;
+}
+
+.navbar .dir button span {
+  color: #c29d5e;
+}
+
+.navbar .dir a {
+  cursor: pointer;
+  color: #c29d5e;
+  font-weight: 600;
+}
+
+.navbar .dir form input {
+  color: #fff;
+  margin-right: 3rem;
+  width: 20rem;
+  height: 2.4rem;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 0.3rem;
+  padding-left: 1rem;
+}
+
+.navbar .dir form button {
+  position: absolute;
+  right: 16.2rem;
+  top: 1.8rem;
+  background: transparent;
+  color: #fff;
+  border-left: 1px solid white;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  width: 2rem;
+  height: 1.7rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .esq {
+    padding-left: 0rem;
+    justify-content: space-between;
+    width: 22rem;
+  }
+
+  .navbar .esq h1 {
+    display: none;
+  }
+
+  .navbar .esq img {
+    align-content: center;
+    width: 40%;
+  }
+
+  .navbar .esq button {
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+
+    background: transparent;
+    color: #fff;
+    border: 1px solid grey;
+    border-radius: 0.2rem;
+    padding: 2px 2px 2px 2px;
+  }
+
+  .navbar .dir {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar .dir .logout {
+    display: none;
+  }
+
+  .navbar .dir i,
+  a {
+    display: none;
+  }
+
+  .navbar .dir form input {
+    width: 22rem;
+    margin-right: 0rem;
+  }
+
+  .navbar .dir form button {
+    right: 2.2rem;
+    top: 5rem;
+  }
+
+  .navbar .dir form button i {
+    display: block;
+  }
+}

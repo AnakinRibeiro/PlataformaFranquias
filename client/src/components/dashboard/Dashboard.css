@@ -1,0 +1,51 @@
+.panel {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.panel .panelInner {
+  width: 100%;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+}
+
+.panel .panelInner div {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 20rem;
+  height: 8rem;
+  border-radius: 1rem;
+  background-image: linear-gradient(to right, #00617c, #011d2c);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.panel .panelInner div img {
+  width: 4rem;
+}
+
+.panel .panelInner div h1 {
+  margin-left: 1.5rem;
+}
+
+.panel .panelInner div:hover {
+  color: #c29d5e;
+}
+
+@media (max-width: 700px) {
+  .panel {
+    padding: 5rem 1rem 1rem 1rem;
+  }
+
+  .panel .panelInner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
