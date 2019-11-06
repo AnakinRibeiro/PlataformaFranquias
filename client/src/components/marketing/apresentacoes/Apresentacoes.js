@@ -27,9 +27,11 @@ const Apresentacoes = ({
           </div>
 
           <div className='opcoes'>
-            <h1>Materiais Gráficos</h1>
+            <Link to='/materiais-graficos'>
+              <h1>Materiais Gráficos</h1>
+            </Link>
             <span>|</span>
-            <h1>Apresentações</h1>
+            <h1 className='mg'>Apresentações</h1>
           </div>
         </div>
       </section>

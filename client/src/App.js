@@ -15,6 +15,7 @@ import PrivateRoute from './components/routing/PrivateRoute';
 import ManuaisUpload from './components/manuais/ManuaisUpload';
 import Apresentacoes from './components/marketing/apresentacoes/Apresentacoes';
 import ApresentacoesUpload from './components/marketing/apresentacoes/ApresentacoesUpload';
+import MateriaisGraficos from './components/marketing/materiais_graficos/MateriaisGraficos';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -54,6 +55,11 @@ const App = () => {
                 exact
                 path='/apresentacoes-upload'
                 component={ApresentacoesUpload}
+              />
+              <PrivateRoute
+                exact
+                path='/materiais-graficos'
+                component={MateriaisGraficos}
               />
             </Switch>
           </section>
