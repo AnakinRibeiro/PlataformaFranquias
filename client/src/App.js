@@ -6,6 +6,7 @@ import './components/layout/Navbar.css';
 import './components/dashboard/Dashboard.css';
 import './components/manuais/Manuais.css';
 import './components/marketing/apresentacoes/Apresentacoes.css';
+import './components/marketing/materiais_graficos/MateriaisGraficos.css';
 
 // Components
 import Login from './components/auth/Login';

@@ -1,3 +1,69 @@
 .bannerTitulo .opcoes .mg {
+  color: #c29d5e;
+}
+
+.materiais {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.materiais .novaApresentacao {
+  width: 100%;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.materiais .novaApresentacao .btn-novoManual {
+  display: flex;
   color: #fff;
+  width: 3rem;
+  height: 2.5rem;
+  background: #00617c;
+  border: 0px;
+  border-radius: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.materiais .materialInner {
+  justify-content: center;
+  margin-top: 2rem;
+  width: 70%;
+  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.materiais .materialInner .material {
+  background-image: linear-gradient(to right, #00617c, #011d2c);
+  color: #fff;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+}
+
+.materiais .materialInner .material:nth-child(n + 1) {
+  margin-left: 0.8rem;
+}
+
+.materiais .materialInner .material:nth-child(n + 5) {
+  margin-top: 0.5rem;
+}
+
+.materiais .materialInner .material i {
+  margin-left: 0.5rem;
+  color: #c29d5e;
 }

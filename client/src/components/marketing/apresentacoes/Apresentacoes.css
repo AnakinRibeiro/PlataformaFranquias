@@ -1,5 +1,6 @@
 .bannerTitulo div .materiaisTit {
   width: 15rem;
+  font-size: 1.5rem;
 }
 
 .bannerTitulo .bannerTituloInner {
@@ -21,7 +22,7 @@
 }
 
 .bannerTitulo .opcoes h1 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .bannerTitulo .opcoes .mg {
