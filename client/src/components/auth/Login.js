@@ -32,62 +32,57 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <>
-      <section className='fullPage'>
-        <div className='banner'></div>
+      <section id='fullPage'>
+        <div id='left'></div>
 
-        <div className='formCadastro'>
-          <div className='formCadastroInner'>
-            <div className='titulo'>
-              <img src={Logo} alt='' className='logoIcon show-sm' />
+        <div id='right'>
+          <div id='signin'>
+            <div id='titulo'>
               <h1>
                 Bem vindo novamente!
                 <br />
                 Faça login na sua conta
               </h1>
             </div>
+            <form onSubmit={e => onSubmit(e)}>
+              <div>
+                <label>E-mail:</label>
+                <input
+                  type='email'
+                  placeholder='Digite seu e-mail'
+                  name='email'
+                  value={email}
+                  onChange={e => onChange(e)}
+                  required
+                  className='text-input'
+                />
+              </div>
+              <div>
+                <label>Senha:</label>
+                <input
+                  type='password'
+                  placeholder='Digite sua senha'
+                  name='password'
+                  value={password}
+                  onChange={e => onChange(e)}
+                  minLength='6'
+                  className='text-input'
+                />
+              </div>
+              <div id='check'>
+                <input type='checkbox' />
+                <label htmlFor=''>Mantenha-me Conectado</label>
+              </div>
+              <div id='botao'>
+                <button type='submit' className='primary-btn'>
+                  Entrar
+                </button>
+              </div>
+            </form>
 
-            <div className='formOut'>
-              <Alert />
-              <form className='form' onSubmit={e => onSubmit(e)}>
-                <div className='inputGroup'>
-                  <label htmlFor=''>E-mail</label>
-                  <input
-                    type='email'
-                    placeholder='Digite seu e-mail'
-                    name='email'
-                    value={email}
-                    onChange={e => onChange(e)}
-                    required
-                  />
-                </div>
-
-                <div className='inputGroup'>
-                  <label htmlFor=''>Senha</label>
-                  <input
-                    type='password'
-                    placeholder='Digite sua senha'
-                    name='password'
-                    value={password}
-                    onChange={e => onChange(e)}
-                    minLength='6'
-                  />
-                </div>
-
-                <div className='inputGroupC'>
-                  <input type='checkbox' />
-                  <label htmlFor=''>Mantenha-me Conectado</label>
-                </div>
-                <br />
-
-                <div className='dvBtn'>
-                  <button type='submit'>LOGIN</button>
-                </div>
-              </form>
-
-              <p>
-                Ainda não tem uma conta? <span>Inscreva-se</span>
-              </p>
-            </div>
+            <footer id='main-footer'>
+              Ainda não tem uma conta? <span>Inscreva-se</span>
+            </footer>
           </div>
         </div>
       </section>

@@ -1,74 +1,46 @@
 .navbar {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-image: linear-gradient(to right, #00617c, #011d2c);
   padding: 0.7rem 5rem;
 }
 
-.navbar .esq {
+.navbar .navInner {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding-left: 3rem;
+  justify-content: space-between;
+  padding-top: 0.3rem;
 }
 
-.navbar .esq img {
-  width: 130px;
+.navbar .navInner .esq {
+  display: flex;
+  width: 50%;
 }
 
-.navbar .esq h1 {
-  font-weight: 500;
-  color: #fff;
+.navbar .navInner .esq img {
+  width: 150px;
+}
+
+.navbar .navInner .esq h1 {
   margin-left: 3rem;
-  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
 }
 
-.navbar .dir {
+.navbar .navInner .dir {
+  padding-left: 5rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 3rem;
+  width: 50%;
 }
 
-.navbar .dir .fa-bell {
-  margin-right: 2rem;
+.navbar .navInner .dir i {
   color: #fff;
 }
 
-.navbar .dir .logout {
-  display: flex;
-  justify-content: center;
-  width: 5rem;
-  height: 2rem;
-  background: transparent;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: 1px solid #c29d5e;
-  border-radius: 0.4rem;
-  cursor: pointer;
-}
-
-.navbar .dir .logout i {
-  color: #c29d5e;
-  margin-right: 0.3rem;
-}
-
-.navbar .dir button span {
-  color: #c29d5e;
-}
-
-.navbar .dir a {
-  cursor: pointer;
-  color: #c29d5e;
-  font-weight: 600;
-}
-
-.navbar .dir form input {
+.navbar .navInner .dir form input {
   color: #fff;
-  margin-right: 3rem;
+
   width: 20rem;
   height: 2.4rem;
   background: transparent;
@@ -77,10 +49,10 @@
   padding-left: 1rem;
 }
 
-.navbar .dir form button {
+.navbar .navInner .dir form button {
   position: absolute;
-  right: 16.2rem;
-  top: 1.8rem;
+  right: 17.5rem;
+  top: 2rem;
   background: transparent;
   color: #fff;
   border-left: 1px solid white;
@@ -95,63 +67,70 @@
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+.navbar .navInner .dir .logout {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+  height: 2rem;
+  background: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid #c29d5e;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.navbar .navInner .dir .logout i {
+  color: #c29d5e;
+  margin-right: 0.3rem;
+}
+
+@media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    padding: 0 0.3rem;
   }
 
-  .navbar .esq {
-    padding-left: 0rem;
-    justify-content: space-between;
-    width: 22rem;
+  .navbar .navInner {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .navInner .esq {
+    width: 100%;
   }
 
   .navbar .esq h1 {
     display: none;
   }
 
-  .navbar .esq img {
-    align-content: center;
-    width: 40%;
+  .navbar .navInner .dir {
+    padding-left: 0rem;
+    display: flex;
+    padding-top: 0.4rem;
+    width: 100%;
   }
 
-  .navbar .esq button {
-    display: block;
-    width: 2.2rem;
-    height: 2.2rem;
-
-    background: transparent;
-    color: #fff;
-    border: 1px solid grey;
-    border-radius: 0.2rem;
-    padding: 2px 2px 2px 2px;
-  }
-
-  .navbar .dir {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .navbar .dir .logout {
+  .navbar .navInner .dir i {
     display: none;
   }
 
-  .navbar .dir i,
-  a {
+  .navbar .navInner .dir form {
+    width: 100%;
+  }
+
+  .navbar .navInner .dir form input {
+    width: 100%;
+  }
+
+  .navbar .navInner .dir form input button {
     display: none;
+    border: 0px;
   }
 
-  .navbar .dir form input {
-    width: 22rem;
-    margin-right: 0rem;
-  }
-
-  .navbar .dir form button {
-    right: 2.2rem;
-    top: 5rem;
-  }
-
-  .navbar .dir form button i {
-    display: block;
+  .navbar .navInner .dir .logout {
+    display: none;
   }
 }

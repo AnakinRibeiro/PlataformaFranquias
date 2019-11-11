@@ -1,151 +1,93 @@
-.fullPage {
+#fullPage {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
 }
 
-.fullPage .banner {
+#fullPage #left {
   background: url('../../img/banner.jpg') no-repeat center center/cover;
 }
 
-.fullPage .formCadastro {
+#fullPage #right {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  height: 100vh;
 }
 
-.fullPage .formCadastro .formCadastroInner {
-  width: 100%;
-  height: 100%;
+#fullPage #right #signin {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding-bottom: 1rem;
 }
 
-.fullPage .formCadastro .formCadastroInner .titulo h1 {
-  color: #9595a5;
+#fullPage #right #signin #titulo {
+  margin-bottom: 10vh;
+  width: 80%;
+}
+
+#fullPage #right #signin #titulo h1 {
+  color: #555;
   font-weight: 400;
 }
 
-.fullPage .formCadastro .formCadastroInner .formOut {
+#fullPage #right #signin form {
+  width: 60%;
+  padding-bottom: 3rem;
+}
+
+#fullPage #right #signin form label {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+#fullPage #right #signin form .text-input {
+  margin-bottom: 1.3rem;
+  width: 100%;
+  border-radius: 3px;
+  background: transparent;
+  border: 1px solid #010d3e;
+  padding: 0.5rem 1rem;
+  line-height: 1.3rem;
+}
+
+#fullPage #right #signin form #botao {
+  margin-top: 2rem;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-
-  margin-top: 3rem;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .inputGroup {
-  display: flex;
-  flex-direction: column;
-
-  font-weight: 600;
-  color: #010d3e;
-
-  margin-top: 1.5rem;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .inputGroup input {
-  height: 3rem;
-  border: 1px solid #010d3e;
-  border-radius: 0.5rem;
-  padding-left: 1rem;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .inputGroupC input {
-  background: #011d2c;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .dvBtn {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.fullPage .formCadastro .formCadastroInner .formOut form .dvBtn button {
-  height: 3rem;
-  width: 12rem;
-  background-image: linear-gradient(to right, #00617c, #011d2c);
-  border-radius: 0.6rem;
-  border: 0px solid;
-
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
+#fullPage #right #signin form .primary-btn {
+  width: 60%;
 }
 
-.fullPage .formCadastro .formCadastroInner .formOut p {
-  margin-top: 5rem;
-  font-weight: 600;
-  color: #9595a5;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut p span {
+#fullPage #right #signin #main-footer span {
   color: #c29d5e;
   text-decoration: underline;
 }
 
-@media (max-width: 700px) {
-  .show-sm {
-    display: inline;
+@media (max-width: 768px) {
+  #fullPage {
+    grid-template-columns: 1fr;
   }
 
-  .fullPage {
-    display: block;
-  }
-
-  .fullPage .formCadastro {
+  #fullPage #right #signin {
     width: 100%;
-    height: 100vh;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
-  .fullPage .formCadastro .formCadastroInner {
+  #fullPage #right #signin #titulo {
+    margin-bottom: 5vh;
   }
 
-  .fullPage .formCadastro .formCadastroInner .titulo {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .fullPage .formCadastro .formCadastroInner .titulo .logoIcon {
-    width: 10rem;
-    align-self: center;
-  }
-
-  .fullPage .formCadastro .formCadastroInner .titulo h1 {
-    font-size: 1.5rem;
-  }
-
-  .fullPage .formCadastro .formCadastroInner .formOut {
-  }
-
-  .fullPage .formCadastro .formCadastroInner .formOut form {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  .fullPage .banner {
-    display: none;
+  #fullPage #right #signin form {
+    width: 70%;
   }
 }
