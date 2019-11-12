@@ -1,19 +1,23 @@
-.bannerTitulo div .materiaisTit {
-  width: 15rem;
-  font-size: 1.5rem;
-}
-
-.bannerTitulo .bannerTituloInner {
+.bannerTitulo {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+}
+
+.bannerTitulo .iconeEtitulo {
+  width: 50%;
+}
+
+.bannerTitulo .iconeEtitulo h1 {
+  font-size: 1.4rem;
 }
 
 .bannerTitulo .opcoes {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding-right: 1rem;
+  width: 50%;
 }
 
 .bannerTitulo .opcoes span {
@@ -85,4 +89,61 @@
 .apresentacoes .apresentacoesInner .apresentacao i {
   margin-left: 0.5rem;
   color: #c29d5e;
+}
+
+@media (max-width: 779px) {
+  .bannerTitulo {
+    padding: 0 0 0 0;
+    flex-direction: column;
+  }
+
+  .bannerTitulo .iconeEtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 5px;
+  }
+
+  .bannerTitulo .iconeEtitulo h1 {
+    font-size: 1rem;
+  }
+
+  .bannerTitulo .opcoes {
+    justify-content: center;
+    align-items: center;
+    padding-right: 0rem;
+    width: 100%;
+    padding-top: 5px;
+  }
+
+  .bannerTitulo .opcoes span {
+    color: white;
+    margin-left: 1rem;
+  }
+
+  .bannerTitulo .opcoes h1 {
+    font-size: 0.8rem;
+  }
+
+  .apresentacoes {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .apresentacoes .novaApresentacao {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .apresentacoes .apresentacoesInner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 2rem;
+    grid-column-gap: 0.1rem;
+    padding: 0 0 0 0;
+  }
+
+  .apresentacoes .apresentacoesInner .apresentacao {
+    width: 18rem;
+  }
 }

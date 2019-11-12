@@ -1,75 +1,264 @@
-.navbar {
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
   width: 100%;
-  background-image: linear-gradient(to right, #00617c, #011d2c);
-  padding: 0.7rem 5rem;
 }
 
-.navbar .navInner {
+.show-sm {
+  display: none;
+}
+
+.fullPage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [2];
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+}
+
+.fullPage .banner {
+  background: #333;
+}
+
+.fullPage .formCadastro {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 0.3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
-.navbar .navInner .esq {
+.fullPage .formCadastro .formCadastroInner {
+  width: 100%;
+  height: 100%;
+}
+
+.fullPage .formCadastro .formCadastroInner .titulo h1 {
+  color: #9595a5;
+  font-weight: 400;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  margin-top: 3rem;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut form .inputGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: 600;
+  color: #010d3e;
+  margin-top: 1.5rem;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut form .inputGroup input {
+  height: 3rem;
+  border: 1px solid #010d3e;
+  border-radius: 0.5rem;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut form .inputGroupC input {
+  background: #011d2c;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut form .dvBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut form .dvBtn button {
+  height: 3rem;
+  width: 12rem;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#00617c),
+    to(#011d2c)
+  );
+  background-image: linear-gradient(to right, #00617c, #011d2c);
+  border-radius: 0.6rem;
+  border: 0px solid;
+  color: #fff;
+  font-weight: 600;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut p {
+  margin-top: 5rem;
+  font-weight: 600;
+  color: #9595a5;
+}
+
+.fullPage .formCadastro .formCadastroInner .formOut p span {
+  color: #c29d5e;
+  text-decoration: underline;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#00617c),
+    to(#011d2c)
+  );
+  background-image: linear-gradient(to right, #00617c, #011d2c);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.navbar .esq {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50%;
+  height: 100%;
+  padding-left: 8rem;
 }
 
-.navbar .navInner .esq img {
-  width: 150px;
+.navbar .esq img {
+  width: 160px;
+  height: 60px;
 }
 
-.navbar .navInner .esq h1 {
-  margin-left: 3rem;
+.navbar .esq h1 {
   color: #fff;
   font-weight: 500;
+  font-size: 1.1rem;
+  margin-left: 4rem;
 }
 
-.navbar .navInner .dir {
-  padding-left: 5rem;
+.navbar .dir {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 50%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 8rem;
+  padding-left: 8rem;
 }
 
-.navbar .navInner .dir i {
+.navbar .dir i {
   color: #fff;
 }
 
-.navbar .navInner .dir form input {
-  color: #fff;
-
-  width: 20rem;
-  height: 2.4rem;
-  background: transparent;
+.navbar .dir #divBusca {
+  background-color: transparent;
   border: 1px solid #fff;
-  border-radius: 0.3rem;
-  padding-left: 1rem;
+  border-radius: 0.4rem;
+  width: 300px;
 }
 
-.navbar .navInner .dir form button {
-  position: absolute;
-  right: 17.5rem;
-  top: 2rem;
-  background: transparent;
-  color: #fff;
-  border-left: 1px solid white;
-  border-top: none;
-  border-bottom: none;
-  border-right: none;
-  width: 2rem;
-  height: 1.7rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  text-align: center;
-  cursor: pointer;
+.navbar .dir #divBusca #txtBusca {
+  float: left;
+  background-color: transparent;
+  padding-left: 10px;
+  font-style: italic;
+  font-size: 15px;
+  border: none;
+  height: 32px;
+  width: 260px;
 }
 
-.navbar .navInner .dir .logout {
+.navbar .dir #divBusca i {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.navbar .dir button {
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 5rem;
   height: 2rem;
@@ -83,54 +272,146 @@
   cursor: pointer;
 }
 
-.navbar .navInner .dir .logout i {
+.navbar .dir button i {
   color: #c29d5e;
   margin-right: 0.3rem;
 }
 
-@media (max-width: 768px) {
+.panel {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.panel .panelInner {
+  width: 100%;
+  justify-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+}
+
+.panel .panelInner div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  width: 20rem;
+  height: 8rem;
+  border-radius: 1rem;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#00617c),
+    to(#011d2c)
+  );
+  background-image: linear-gradient(to right, #00617c, #011d2c);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.panel .panelInner div img {
+  width: 4rem;
+}
+
+.panel .panelInner div h1 {
+  margin-left: 1.5rem;
+}
+
+.panel .panelInner div:hover {
+  color: #c29d5e;
+}
+
+@media (max-width: 1325px) {
+  .navbar .dir {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1030px) {
+  .navbar .esq {
+    padding-left: 0;
+  }
+  .navbar .dir {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 779px) {
   .navbar {
-    padding: 0 0.3rem;
-  }
-
-  .navbar .navInner {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    width: 100%;
+    padding: 0;
   }
-
-  .navbar .navInner .esq {
+  .navbar .esq {
     width: 100%;
+    padding: 1rem 1.4rem 0 1.4rem;
+    margin: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
-
+  .navbar .esq img {
+    width: 110px;
+    height: 42px;
+  }
   .navbar .esq h1 {
     display: none;
   }
-
-  .navbar .navInner .dir {
-    padding-left: 0rem;
+  .navbar .esq .show-sm {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    padding-top: 0.4rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+  }
+  .navbar .dir {
     width: 100%;
+    padding: 0.7rem 1.4rem 1rem 1.4rem;
+    margin: 0;
   }
 
-  .navbar .navInner .dir i {
+  .navbar .dir .fa-bell {
     display: none;
   }
-
-  .navbar .navInner .dir form {
-    width: 100%;
-  }
-
-  .navbar .navInner .dir form input {
-    width: 100%;
-  }
-
-  .navbar .navInner .dir form input button {
+  .navbar .dir .hide-i {
     display: none;
-    border: 0px;
   }
-
-  .navbar .navInner .dir .logout {
+  .navbar .dir #divBusca {
+    width: 100%;
+  }
+  .navbar .dir #divBusca i {
+    display: none;
+  }
+  .navbar .dir button {
+    display: none;
+  }
+  .navbar .dir button i {
     display: none;
   }
 }

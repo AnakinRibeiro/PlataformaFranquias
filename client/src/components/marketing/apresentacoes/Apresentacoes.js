@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { getApresentacoes } from '../../../actions/apresentacao';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { getApresentacoes } from "../../../actions/apresentacao";
 
-import Navbar from '../../layout/Navbar';
-import Seo from '../../../img/seo.svg';
+import Navbar from "../../layout/Navbar";
+import Seo from "../../../img/seo.svg";
 
 const Apresentacoes = ({
   getApresentacoes,
@@ -18,44 +18,45 @@ const Apresentacoes = ({
   return (
     <>
       <Navbar />
-      <div className='divisao'></div>
-      <section className='bannerTitulo'>
-        <div className='bannerTituloInner'>
-          <div className='iconeEtitulo'>
-            <img src={Seo} alt='' />
-            <h1 className='materiaisTit'>Materiais de Marketing</h1>
-          </div>
+      <div className="divisao"></div>
+      <section className="bannerTitulo">
+        <div className="iconeEtitulo">
+          <img src={Seo} alt="" />
+          <h1 className="materiaisTit">
+            Materiais de <br />
+            Marketing
+          </h1>
+        </div>
 
-          <div className='opcoes'>
-            <Link to='/materiais-graficos'>
-              <h1>Materiais Gráficos</h1>
-            </Link>
-            <span>|</span>
-            <h1 className='mg'>Apresentações</h1>
-          </div>
+        <div className="opcoes">
+          <Link to="/materiais-graficos">
+            <h1>Materiais Gráficos</h1>
+          </Link>
+          <span>|</span>
+          <h1 className="mg">Apresentações</h1>
         </div>
       </section>
 
-      <section className='apresentacoes'>
-        <div className='novaApresentacao'>
-          <Link to='/dashboard'>
-            <button className='btn-novoManual'>
-              <i className='fas fa-arrow-left'></i>
+      <section className="apresentacoes">
+        <div className="novaApresentacao">
+          <Link to="/dashboard">
+            <button className="btn-novoManual">
+              <i className="fas fa-arrow-left"></i>
             </button>
           </Link>
 
-          <Link to='/apresentacoes-upload'>
-            <button className='btn-novoManual'>
-              <i className='fas fa-plus'></i>
+          <Link to="/apresentacoes-upload">
+            <button className="btn-novoManual">
+              <i className="fas fa-plus"></i>
             </button>
           </Link>
         </div>
-        <div className='apresentacoesInner'>
+        <div className="apresentacoesInner">
           {apresentacoes.map(apresentacao => (
             <a href={apresentacao.path} key={apresentacao._id} download>
-              <div className='apresentacao'>
+              <div className="apresentacao">
                 {apresentacao.name}
-                <i className='fas fa-download'></i>
+                <i className="fas fa-download"></i>
               </div>
             </a>
           ))}
@@ -76,7 +77,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { getApresentacoes }
-)(Apresentacoes);
+export default connect(mapStateToProps, { getApresentacoes })(Apresentacoes);

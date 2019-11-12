@@ -1,43 +1,39 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { logout } from '../../actions/auth';
-import PropTypes from 'prop-types';
+import React from "react";
+import { connect } from "react-redux";
+import { logout } from "../../actions/auth";
+import PropTypes from "prop-types";
 
-import Logo from '../../img/LogoEvehx.png';
+import Logo from "../../img/LogoEvehx.png";
 
 const Navbar = ({ auth: { user }, logout }) => {
   return (
     <>
-      <nav className='navbar'>
-        <div className='navInner'>
-          <div className='esq'>
-            <img src={Logo} />
+      <nav className="navbar">
+        <div className="esq">
+          <img src={Logo} />
 
-            <h1>
-              Seja bem-vindo, <br />
-              {user && user.name}
-            </h1>
+          <h1>
+            Seja bem-vindo, <br />
+            {user && user.name}
+          </h1>
 
-            <button className='show-sm'>
-              <i className='fas fa-bars fa-2x'></i>
-            </button>
+          <button className="show-sm">
+            <i className="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div className="dir">
+          <i className="fas fa-bell"></i>
+
+          <div id="divBusca">
+            <input type="text" id="txtBusca" placeholder="Pesquisar..." />
+            <i class="fas fa-search" id="btnBusca"></i>
           </div>
 
-          <div className='dir'>
-            <i className='fas fa-bell'></i>
-
-            <form action='#'>
-              <input type='text' placeholder='Pesquisar...' />
-              <button type='submit' className='form-control submit'>
-                <i className='fas fa-search'></i>
-              </button>
-            </form>
-
-            <button className='logout' onClick={logout}>
-              <i className='fas fa-door-open'></i>
-              <span>Sair</span>
-            </button>
-          </div>
+          <button onClick={logout}>
+            <i class="fas fa-door-open hide-i"></i>
+            <p>Sair</p>
+          </button>
         </div>
       </nav>
     </>
@@ -53,7 +49,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { logout }
-)(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);
