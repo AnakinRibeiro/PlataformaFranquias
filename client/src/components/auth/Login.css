@@ -5,7 +5,7 @@
 }
 
 #fullPage #left {
-  background: url('../../img/banner.jpg') no-repeat center center/cover;
+  background: url("../../img/banner.jpg") no-repeat center center/cover;
 }
 
 #fullPage #right {
@@ -75,12 +75,19 @@
 }
 
 @media (max-width: 768px) {
+  #titulo {
+    align-items: center;
+    text-align: center;
+  }
+
   #fullPage {
+    border: 1px solid green;
     grid-template-columns: 1fr;
   }
 
   #fullPage #right #signin {
     width: 100%;
+    padding-bottom: 5rem;
   }
 
   #fullPage #right #signin #titulo {

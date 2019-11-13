@@ -19,38 +19,40 @@ const Apresentacoes = ({
     <>
       <Navbar />
       <div className="divisao"></div>
-      <section className="bannerTitulo">
-        <div className="iconeEtitulo">
-          <img src={Seo} alt="" />
-          <h1 className="materiaisTit">
-            Materiais de <br />
-            Marketing
-          </h1>
+      <section className="bannerTitulo2">
+        <div id="esq">
+          <Link to="/dashboard">
+            <button className="btn-novoManual">
+              <i className="fas fa-arrow-left fa-2x"></i>
+            </button>
+          </Link>
+          <div>
+            <img src={Seo} alt="" />
+            <h1 className="materiaisTit">
+              Materiais de <br />
+              Marketing
+            </h1>
+          </div>
         </div>
 
-        <div className="opcoes">
-          <Link to="/materiais-graficos">
-            <h1>Materiais Gráficos</h1>
+        <div id="dir">
+          <div>
+            <Link to="/materiais-graficos">
+              <h1>Materiais Gráficos</h1>
+            </Link>
+            <span>|</span>
+            <h1 className="mg">Apresentações</h1>
+          </div>
+
+          <Link to="/dashboard">
+            <button className="btn-novoManual">
+              <i className="fas fa-plus fa-2x"></i>
+            </button>
           </Link>
-          <span>|</span>
-          <h1 className="mg">Apresentações</h1>
         </div>
       </section>
 
-      <section className="apresentacoes">
-        <div className="novaApresentacao">
-          <Link to="/dashboard">
-            <button className="btn-novoManual">
-              <i className="fas fa-arrow-left"></i>
-            </button>
-          </Link>
-
-          <Link to="/apresentacoes-upload">
-            <button className="btn-novoManual">
-              <i className="fas fa-plus"></i>
-            </button>
-          </Link>
-        </div>
+      <section className="main">
         <div className="apresentacoesInner">
           {apresentacoes.map(apresentacao => (
             <a href={apresentacao.path} key={apresentacao._id} download>

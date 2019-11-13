@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { getManuais } from '../../actions/manual';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { getManuais } from "../../actions/manual";
+import { Link } from "react-router-dom";
 
-import Navbar from '../../components/layout/Navbar';
-import Instruction from '../../img/instruction.svg';
+import Navbar from "../../components/layout/Navbar";
+import Instruction from "../../img/instruction.svg";
 
 const Manuais = ({
   getManuais,
@@ -19,38 +19,39 @@ const Manuais = ({
   return (
     <>
       <Navbar />
-      <div className='divisao'></div>
-      <section className='bannerTitulo'>
-        <div>
-          <img src={Instruction} alt='' />
+      <div className="divisao"></div>
+      <section className="bannerTitulo">
+        <div id="esq">
+          <Link to="/dashboard">
+            <button className="btn-novoManual">
+              <i className="fas fa-arrow-left fa-2x"></i>
+            </button>
+          </Link>
+        </div>
+        <div id="meio">
+          <img src={Instruction} alt="" />
           <h1>
             Manuais <br />
             Evehx
           </h1>
         </div>
-      </section>
-
-      <section className='pdfs'>
-        <div className='novoManual'>
-          <Link to='/dashboard'>
-            <button className='btn-novoManual'>
-              <i class='fas fa-arrow-left'></i>
-            </button>
-          </Link>
-
-          <Link to='/manuais-upload'>
-            <button className='btn-novoManual'>
-              <i class='fas fa-plus'></i>
+        <div id="dir">
+          <Link to="/manuais-upload">
+            <button className="btn-novoManual">
+              <i className="fas fa-plus fa-2x"></i>
             </button>
           </Link>
         </div>
-        <div className='pdfsInner'>
+      </section>
+
+      <section className="main">
+        <div className="pdfsInner">
           {manuais.map(manual => (
-            <div className='pdf' key={manual._id}>
-              <i className='fas fa-file-pdf fa-4x'></i>
+            <div className="pdf" key={manual._id}>
+              <i className="fas fa-file-pdf fa-4x"></i>
               <a href={manual.path} download>
-                <div className='bot'>
-                  {manual.name} <i className='fas fa-download'></i>
+                <div className="bot">
+                  {manual.name} <i className="fas fa-download"></i>
                 </div>
               </a>
             </div>
@@ -72,7 +73,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { getManuais }
-)(Manuais);
+export default connect(mapStateToProps, { getManuais })(Manuais);

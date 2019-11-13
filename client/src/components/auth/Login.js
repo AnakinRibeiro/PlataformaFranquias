@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import React, { useState } from "react";
+import { connect } from "react-redux";
 
-import { Redirect } from 'react-router-dom';
+import { Redirect } from "react-router-dom";
 
-import PropTypes from 'prop-types';
-import { login } from '../../actions/auth';
+import PropTypes from "prop-types";
+import { login } from "../../actions/auth";
 
-import Logo from '../../img/icon.png';
-import Alert from '../layout/Alert';
+import Logo from "../../img/icon.png";
+import Alert from "../layout/Alert";
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   });
 
   const { email, password } = formData;
@@ -27,17 +27,18 @@ const Login = ({ login, isAuthenticated }) => {
 
   // Redirect if logged in
   if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
+    return <Redirect to="/dashboard" />;
   }
 
   return (
     <>
-      <section id='fullPage'>
-        <div id='left'></div>
+      <section id="fullPage">
+        <div id="left"></div>
 
-        <div id='right'>
-          <div id='signin'>
-            <div id='titulo'>
+        <div id="right">
+          <div id="signin">
+            <img src={Logo} alt="" className="hide-sm" />
+            <div id="titulo">
               <h1>
                 Bem vindo novamente!
                 <br />
@@ -48,39 +49,39 @@ const Login = ({ login, isAuthenticated }) => {
               <div>
                 <label>E-mail:</label>
                 <input
-                  type='email'
-                  placeholder='Digite seu e-mail'
-                  name='email'
+                  type="email"
+                  placeholder="Digite seu e-mail"
+                  name="email"
                   value={email}
                   onChange={e => onChange(e)}
                   required
-                  className='text-input'
+                  className="text-input"
                 />
               </div>
               <div>
                 <label>Senha:</label>
                 <input
-                  type='password'
-                  placeholder='Digite sua senha'
-                  name='password'
+                  type="password"
+                  placeholder="Digite sua senha"
+                  name="password"
                   value={password}
                   onChange={e => onChange(e)}
-                  minLength='6'
-                  className='text-input'
+                  minLength="6"
+                  className="text-input"
                 />
               </div>
-              <div id='check'>
-                <input type='checkbox' />
-                <label htmlFor=''>Mantenha-me Conectado</label>
+              <div id="check">
+                <input type="checkbox" />
+                <label htmlFor="">Mantenha-me Conectado</label>
               </div>
-              <div id='botao'>
-                <button type='submit' className='primary-btn'>
+              <div id="botao">
+                <button type="submit" className="primary-btn">
                   Entrar
                 </button>
               </div>
             </form>
 
-            <footer id='main-footer'>
+            <footer id="main-footer">
               Ainda não tem uma conta? <span>Inscreva-se</span>
             </footer>
           </div>
@@ -99,7 +100,4 @@ const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(
-  mapStateToProps,
-  { login }
-)(Login);
+export default connect(mapStateToProps, { login })(Login);
