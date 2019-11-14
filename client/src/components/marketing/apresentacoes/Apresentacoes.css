@@ -1,112 +1,4 @@
-.bannerTitulo2 {
-  width: 100%;
-  display: flex;
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  justify-content: center;
-  background-image: linear-gradient(#00617c, #011d2c);
-}
-
-.bannerTitulo2 #esq {
-  display: flex;
-  align-items: center;
-  width: 40%;
-}
-
-.bannerTitulo2 #esq button {
-  width: 3rem;
-  height: 3rem;
-  background: transparent;
-  border: 0;
-  color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  border: 2px solid #fff;
-}
-
-.bannerTitulo2 #esq div {
-  margin-left: 6rem;
-  display: flex;
-}
-
-.bannerTitulo2 #esq div img {
-  width: 4rem;
-}
-
-.bannerTitulo2 #esq div h1 {
-  font-weight: 500;
-  margin-left: 1rem;
-  font-size: 1.4rem;
-  color: #fff;
-}
-
-.bannerTitulo2 #dir {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  padding-left: 17rem;
-}
-
-.bannerTitulo2 #dir div {
-  display: flex;
-}
-
-.bannerTitulo2 #dir div h1 {
-  color: #fff;
-  font-weight: 500;
-}
-
-.bannerTitulo2 #dir div span {
-  color: #fff;
-  margin-left: 1rem;
-}
-
-.bannerTitulo2 #dir div .mg {
-  color: #c29d5e;
-  margin-left: 1rem;
-}
-
-.bannerTitulo2 #dir button {
-  width: 3rem;
-  height: 3rem;
-  background: transparent;
-  color: #c29d5e;
-  border-radius: 10px;
-  cursor: pointer;
-  border: 2px solid #c29d5e;
-}
-
-.apresentacoes {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
-}
-
-.apresentacoes .novaApresentacao {
-  padding-right: 3rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.apresentacoes .novaApresentacao .btn-novoManual {
-  display: flex;
-  color: #fff;
-  width: 3rem;
-  height: 2.5rem;
-  background: #00617c;
-  border: 0px;
-  border-radius: 0.4rem;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.apresentacoes .apresentacoesInner {
+.apresentacoesInner {
   margin-top: 2rem;
   width: 100%;
   justify-items: center;
@@ -119,7 +11,7 @@
   padding-top: 4rem;
 }
 
-.apresentacoes .apresentacoesInner .apresentacao {
+.apresentacoesInner .apresentacao {
   background-image: linear-gradient(to right, #00617c, #011d2c);
   color: #fff;
   font-size: 1.1rem;
@@ -132,59 +24,61 @@
   cursor: pointer;
 }
 
-.apresentacoes .apresentacoesInner .apresentacao i {
+.apresentacoesInner .apresentacao i {
   margin-left: 0.5rem;
   color: #c29d5e;
 }
 
 @media (max-width: 779px) {
-  .bannerTitulo .iconeEtitulo {
-    display: flex;
-    justify-content: center;
+  .bannerTitulo2 {
+    flex-direction: column;
+    padding: 0.5rem 1.4rem 0.5rem 1.4rem;
     align-items: center;
-    width: 100%;
-    padding-top: 5px;
+    justify-content: center;
   }
 
-  .bannerTitulo .iconeEtitulo h1 {
+  .bannerTitulo2 #esq {
+    width: 100%;
+  }
+
+  .bannerTitulo2 #esq div {
+    padding: 0;
+    margin-left: 2rem;
+  }
+
+  .bannerTitulo2 #esq div img {
+    width: 3rem;
+  }
+
+  .bannerTitulo2 #esq div h1 {
     font-size: 1rem;
   }
 
-  .bannerTitulo .opcoes {
-    justify-content: center;
-    align-items: center;
-    padding-right: 0rem;
+  .bannerTitulo2 #dir {
+    flex-direction: row-reverse;
     width: 100%;
-    padding-top: 5px;
+    padding-left: 0;
+    padding-top: 8px;
+    margin: 0;
   }
 
-  .bannerTitulo .opcoes span {
-    color: white;
-    margin-left: 1rem;
+  .bannerTitulo2 #dir div {
+    margin-right: 1.2rem;
   }
 
-  .bannerTitulo .opcoes h1 {
+  .bannerTitulo2 #dir div h1,
+  span {
     font-size: 0.8rem;
   }
 
-  .apresentacoes {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .apresentacoes .novaApresentacao {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .apresentacoes .apresentacoesInner {
+  .apresentacoesInner {
     grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 2rem;
-    grid-column-gap: 0.1rem;
-    padding: 0 0 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 2rem;
   }
 
-  .apresentacoes .apresentacoesInner .apresentacao {
+  .apresentacoesInner .apresentacao {
     width: 18rem;
   }
 }
