@@ -36,7 +36,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { email, password } = req.body;
+    const { email, password, manter } = req.body;
 
     try {
       // See if user exists
@@ -62,15 +62,27 @@ router.post(
         }
       };
 
-      jwt.sign(
-        payload,
-        config.get('jwtSecret'),
-        { expiresIn: 360000 },
-        (error, token) => {
-          if (error) throw error;
-          res.json({ token });
-        }
-      );
+      if (manter) {
+        jwt.sign(
+          payload,
+          config.get('jwtSecret'),
+          { expiresIn: 360000 },
+          (error, token) => {
+            if (error) throw error;
+            res.json({ token });
+          }
+        );
+      } else {
+        jwt.sign(
+          payload,
+          config.get('jwtSecret'),
+          { expiresIn: 3600 },
+          (error, token) => {
+            if (error) throw error;
+            res.json({ token });
+          }
+        );
+      }
     } catch (error) {
       console.error(error.message);
       res.status(500).send('Server error');
