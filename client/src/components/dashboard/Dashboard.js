@@ -25,36 +25,36 @@ const Dashboard = ({ auth: { isAuthenticated } }) => {
         <div className='panelInner'>
           <div>
             <img src={Newsletter} alt='' />
-            <h1>Newsletter</h1>
+            <h2>Newsletter</h2>
           </div>
 
           <div>
             <img src={Loupe} alt='' />
-            <h1>Oráculo</h1>
+            <h2>Oráculo</h2>
           </div>
 
           <Link to='/apresentacoes'>
             <div>
               <img src={Seo} alt='' />
-              <h1>Marketing</h1>
+              <h2>Marketing</h2>
             </div>
           </Link>
 
           <div>
             <img src={Training} alt='' />
-            <h1>Treinamentos</h1>
+            <h2>Treinamentos</h2>
           </div>
 
           <Link to='/manuais'>
             <div>
               <img src={Instruction} alt='' />
-              <h1>Manuais Evehx</h1>
+              <h2>Manuais Evehx</h2>
             </div>
           </Link>
 
           <div>
             <img src={Video} alt='' />
-            <h1>Aulas Online</h1>
+            <h2>Aulas Online</h2>
           </div>
         </div>
       </section>

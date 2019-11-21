@@ -1,179 +1,4 @@
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  background-color: #fff;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  width: 100%;
-}
-
-.show-sm {
-  display: none;
-}
-
-.fullPage {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr) [2];
-  grid-template-columns: repeat(2, 1fr);
-  height: 100vh;
-}
-
-.fullPage .banner {
-  background: #333;
-}
-
-.fullPage .formCadastro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.fullPage .formCadastro .formCadastroInner {
-  width: 100%;
-  height: 100%;
-}
-
-.fullPage .formCadastro .formCadastroInner .titulo h1 {
-  color: #9595a5;
-  font-weight: 400;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  justify-content: left;
-  -webkit-box-align: left;
-  -ms-flex-align: left;
-  align-items: left;
-  margin-top: 3rem;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .inputGroup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-weight: 600;
-  color: #010d3e;
-  margin-top: 1.5rem;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .inputGroup input {
-  height: 3rem;
-  border: 1px solid #010d3e;
-  border-radius: 0.5rem;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .inputGroupC input {
-  background: #011d2c;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .dvBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut form .dvBtn button {
-  height: 3rem;
-  width: 12rem;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#00617c),
-    to(#011d2c)
-  );
-  background-image: linear-gradient(to right, #00617c, #011d2c);
-  border-radius: 0.6rem;
-  border: 0px solid;
-  color: #fff;
-  font-weight: 600;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut p {
-  margin-top: 5rem;
-  font-weight: 600;
-  color: #9595a5;
-}
-
-.fullPage .formCadastro .formCadastroInner .formOut p span {
-  color: #c29d5e;
-  text-decoration: underline;
-}
-
-.navbar {
+.navbarA {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +14,7 @@ img {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-.navbar .esq {
+.navbarA .esq {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,19 +23,22 @@ img {
   padding-left: 8rem;
 }
 
-.navbar .esq img {
+.navbarA .esq img {
   width: 160px;
   height: 60px;
 }
 
-.navbar .esq h1 {
+.navbarA .esq h1 {
   color: #fff;
   font-weight: 500;
   font-size: 1.1rem;
   margin-left: 4rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  margin-top: 0.3rem;
 }
 
-.navbar .dir {
+.navbarA .dir {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,18 +53,18 @@ img {
   padding-left: 8rem;
 }
 
-.navbar .dir i {
+.navbarA .dir i {
   color: #fff;
 }
 
-.navbar .dir #divBusca {
+.navbarA .dir #divBusca {
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 0.4rem;
   width: 300px;
 }
 
-.navbar .dir #divBusca #txtBusca {
+.navbarA .dir #divBusca #txtBusca {
   float: left;
   background-color: transparent;
   padding-left: 10px;
@@ -247,34 +75,32 @@ img {
   width: 260px;
 }
 
-.navbar .dir #divBusca i {
+.navbarA .dir #divBusca i {
   margin-top: 0.5rem;
   margin-left: 0.5rem;
 }
 
-.navbar .dir button {
+.navbarA .dir .sair {
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 5rem;
   height: 2rem;
   background: transparent;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   border: 1px solid #c29d5e;
   border-radius: 0.4rem;
   cursor: pointer;
+  text-align: center;
 }
 
-.navbar .dir button i {
+.navbarA .dir .sair i {
   color: #c29d5e;
+  margin-top: 0.4rem;
   margin-right: 0.3rem;
+}
+
+.navbarA .dir .sair p {
+  margin-top: 0.2rem;
 }
 
 .panel {
@@ -347,8 +173,8 @@ img {
   }
 }
 
-@media (max-width: 779px) {
-  .navbar {
+@media (max-width: 576px) {
+  .navbarA {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -356,7 +182,7 @@ img {
     flex-direction: column;
     padding: 0;
   }
-  .navbar .esq {
+  .navbarA .esq {
     width: 100%;
     padding: 1rem 1.4rem 0 1.4rem;
     margin: 0;
@@ -367,14 +193,14 @@ img {
     -ms-flex-align: center;
     align-items: center;
   }
-  .navbar .esq img {
+  .navbarA .esq img {
     width: 110px;
     height: 42px;
   }
-  .navbar .esq h1 {
+  .navbarA .esq h1 {
     display: none;
   }
-  .navbar .esq .show-sm {
+  .navbarA .esq .show-sm {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -390,28 +216,28 @@ img {
     border: 1px solid #fff;
     border-radius: 5px;
   }
-  .navbar .dir {
+  .navbarA .dir {
     width: 100%;
     padding: 0.7rem 1.4rem 1rem 1.4rem;
     margin: 0;
   }
 
-  .navbar .dir .fa-bell {
+  .navbarA .dir .fa-bell {
     display: none;
   }
-  .navbar .dir .hide-i {
+  .navbarA .dir .hide-i {
     display: none;
   }
-  .navbar .dir #divBusca {
+  .navbarA .dir #divBusca {
     width: 100%;
   }
-  .navbar .dir #divBusca i {
+  .navbarA .dir #divBusca i {
     display: none;
   }
-  .navbar .dir button {
+  .navbarA .dir .sair {
     display: none;
   }
-  .navbar .dir button i {
+  .navbarA .dir .sair i {
     display: none;
   }
 }

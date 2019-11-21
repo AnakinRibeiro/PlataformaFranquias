@@ -46,7 +46,9 @@ const Login = ({ login, isAuthenticated }) => {
                 Faça login na sua conta
               </h1>
             </div>
+
             <form onSubmit={e => onSubmit(e)}>
+              <Alert />
               <div>
                 <label>E-mail:</label>
                 <input

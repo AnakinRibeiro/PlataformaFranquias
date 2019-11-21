@@ -9,39 +9,41 @@ const MateriaisGraficos = () => {
     <>
       <Navbar />
       <div className='divisao'></div>
-      <section className='bannerTitulo'>
-        <div className='bannerTituloInner'>
-          <div className='iconeEtitulo'>
+      <section className='bannerTitulo2'>
+        <div id='esq'>
+          <Link to='/dashboard'>
+            <button className='btn-novoManual'>
+              <i className='fas fa-arrow-left fa-2x'></i>
+            </button>
+          </Link>
+          <div>
             <img src={Seo} alt='' />
-            <h1 className='materiaisTit'>Materiais de Marketing</h1>
+            <h1 className='materiaisTit'>
+              Materiais de <br />
+              Marketing
+            </h1>
           </div>
+        </div>
 
-          <div className='opcoes'>
-            <Link to='/materiais-graficos'>
-              <h1 className='mg'>Materiais Gráficos</h1>
-            </Link>
+        <div id='dir'>
+          <div>
+            <h1 className='mg'>Materiais Gráficos</h1>
+
             <span>|</span>
             <Link to='/apresentacoes'>
-              <h1>Apresentações</h1>
+              <h1 className='bg'>Apresentações</h1>
             </Link>
           </div>
+
+          <Link to='/apresentacoes-upload'>
+            <button className='btn-novoManual'>
+              <i className='fas fa-plus fa-2x'></i>
+            </button>
+          </Link>
         </div>
       </section>
 
       <section className='materiais'>
-        <div className='novaApresentacao'>
-          <Link to='/dashboard'>
-            <button className='btn-novoManual'>
-              <i className='fas fa-arrow-left'></i>
-            </button>
-          </Link>
-
-          <Link to='/apresentacoes-upload'>
-            <button className='btn-novoManual'>
-              <i className='fas fa-plus'></i>
-            </button>
-          </Link>
-        </div>
         <div className='materialInner'>
           <div className='material'>
             Folha Timbrada

@@ -9,6 +9,8 @@ import './components/marketing/apresentacoes/Apresentacoes.css';
 import './components/marketing/materiais_graficos/MateriaisGraficos.css';
 
 // Components
+
+import Alert from './components/layout/Alert';
 import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
 import Manuais from './components/manuais/Manuais';
@@ -38,32 +40,31 @@ const App = () => {
       <Router>
         <Fragment>
           <Route exact path='/' component={Login} />
-          <section className='container'>
-            <Switch>
-              <PrivateRoute exact path='/dashboard' component={Dashboard} />
-              <PrivateRoute exact path='/manuais' component={Manuais} />
-              <PrivateRoute
-                exact
-                path='/manuais-upload'
-                component={ManuaisUpload}
-              />
-              <PrivateRoute
-                exact
-                path='/apresentacoes'
-                component={Apresentacoes}
-              />
-              <PrivateRoute
-                exact
-                path='/apresentacoes-upload'
-                component={ApresentacoesUpload}
-              />
-              <PrivateRoute
-                exact
-                path='/materiais-graficos'
-                component={MateriaisGraficos}
-              />
-            </Switch>
-          </section>
+
+          <Switch>
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
+            <PrivateRoute exact path='/manuais' component={Manuais} />
+            <PrivateRoute
+              exact
+              path='/manuais-upload'
+              component={ManuaisUpload}
+            />
+            <PrivateRoute
+              exact
+              path='/apresentacoes'
+              component={Apresentacoes}
+            />
+            <PrivateRoute
+              exact
+              path='/apresentacoes-upload'
+              component={ApresentacoesUpload}
+            />
+            <PrivateRoute
+              exact
+              path='/materiais-graficos'
+              component={MateriaisGraficos}
+            />
+          </Switch>
         </Fragment>
       </Router>
     </Provider>

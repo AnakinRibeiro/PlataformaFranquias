@@ -32,8 +32,8 @@
   width: 4rem;
 }
 
-.panel .panelInner div h1 {
-  margin-left: 1.5rem;
+.panel .panelInner div h2 {
+  margin-left: 0.8rem;
 }
 
 .panel .panelInner div:hover {

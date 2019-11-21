@@ -39,7 +39,7 @@ img {
 
 .alert {
   text-align: center;
-  width: 25rem;
+  width: 24rem;
   padding: 0.8rem;
   margin: 1rem 0;
   opacity: 0.9;
@@ -253,11 +253,11 @@ img {
 .bannerTitulo2 #dir div span {
   color: #fff;
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .bannerTitulo2 #dir div .mg {
   color: #c29d5e;
-  margin-left: 1rem;
 }
 
 .bannerTitulo2 #dir button {
@@ -278,7 +278,7 @@ img {
   padding-bottom: 3rem;
 }
 
-@media (max-width: 779px) {
+@media (max-width: 576px) {
   .hide-sm {
     display: block;
     width: 10rem;
