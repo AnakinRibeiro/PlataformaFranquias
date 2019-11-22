@@ -10,6 +10,14 @@
   flex-direction: column;
 }
 
+.pdfUpload form .btnUpload {
+  border-radius: 5px;
+  height: 35px;
+  background-image: linear-gradient(#00617c, #011d2c);
+  border: 0;
+  color: #fff;
+}
+
 .pdfsInner {
   margin-top: 2rem;
   width: 100%;

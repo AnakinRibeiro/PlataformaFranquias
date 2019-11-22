@@ -27,11 +27,11 @@ const MateriaisGraficos = () => {
 
         <div id='dir'>
           <div>
-            <h1 className='mg'>Materiais Gráficos</h1>
+            <h4 className='mg'>Materiais Gráficos</h4>
 
             <span>|</span>
             <Link to='/apresentacoes'>
-              <h1 className='bg'>Apresentações</h1>
+              <h4 className='bg'>Apresentações</h4>
             </Link>
           </div>
 

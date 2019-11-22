@@ -24,7 +24,10 @@ const Manuais = ({
   const [show, setShow] = useState(false);
   const [file, setFile] = useState({});
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    window.location.reload(false);
+  };
   const handleShow = () => setShow(true);
 
   const onChange = e => {
@@ -97,7 +100,11 @@ const Manuais = ({
             </section>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant='primary' onClick={handleClose}>
+            <Button
+              onClick={handleClose}
+              variant='secondary'
+              className='btnFechar'
+            >
               Fechar
             </Button>
           </Modal.Footer>

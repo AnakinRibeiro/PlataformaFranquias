@@ -1,20 +1,52 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getApresentacoes } from '../../../actions/apresentacao';
+import { addApresentacao } from '../../../actions/apresentacao';
+import { Button, Modal } from 'react-bootstrap';
 
 import Navbar from '../../layout/Navbar';
 import Seo from '../../../img/seo.svg';
 
 const Apresentacoes = ({
   getApresentacoes,
-  apresentacao: { apresentacoes, loading },
-  auth: { isAuthenticated }
+  addApresentacao,
+  apresentacao: { apresentacoes, loading }
 }) => {
   useEffect(() => {
     getApresentacoes();
   }, [getApresentacoes]);
+
+  const [nameData, setNameData] = useState({
+    name: ''
+  });
+
+  const [file, setFile] = useState({});
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+    setShow(false);
+    window.location.reload(false);
+  };
+  const handleShow = () => setShow(true);
+
+  const { name } = nameData;
+
+  const onChangeName = e =>
+    setNameData({ ...nameData, [e.target.name]: e.target.value });
+
+  const onChangeFile = e => setFile(e.target.files[0]);
+
+  const onSubmit = async e => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('file', file);
+
+    addApresentacao(formData);
+  };
+
   return (
     <>
       <Navbar />
@@ -38,17 +70,15 @@ const Apresentacoes = ({
         <div id='dir'>
           <div>
             <Link to='/materiais-graficos'>
-              <h1>Materiais Gráficos</h1>
+              <h4>Materiais Gráficos</h4>
             </Link>
             <span>|</span>
-            <h1 className='mg'>Apresentações</h1>
+            <h4 className='mg'>Apresentações</h4>
           </div>
 
-          <Link to='/apresentacoes-upload'>
-            <button className='btn-novoManual'>
-              <i className='fas fa-plus fa-2x'></i>
-            </button>
-          </Link>
+          <button className='btn-novoManual' onClick={handleShow}>
+            <i className='fas fa-plus fa-2x'></i>
+          </button>
         </div>
       </section>
 
@@ -63,6 +93,44 @@ const Apresentacoes = ({
             </a>
           ))}
         </div>
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Nova Apresentação</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <section className='main'>
+              <div className='pdfUpload'>
+                <form onSubmit={onSubmit}>
+                  <label htmlFor='name'>Nome do arquivo:</label>
+                  <input
+                    type='text'
+                    name='name'
+                    value={name}
+                    onChange={e => onChangeName(e)}
+                  />{' '}
+                  <br />
+                  <input
+                    type='file'
+                    className='inserirFile'
+                    onChange={onChangeFile}
+                  />
+                  <br />
+                  <input type='submit' value='Upload' className='btnUpload' />
+                </form>
+              </div>
+            </section>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              onClick={handleClose}
+              variant='secondary'
+              className='btnFechar'
+            >
+              Fechar
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </section>
     </>
   );
@@ -71,7 +139,8 @@ const Apresentacoes = ({
 Apresentacoes.propTypes = {
   getApresentacoes: PropTypes.func.isRequired,
   apresentacao: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
+  addApresentacao: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -79,4 +148,6 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { getApresentacoes })(Apresentacoes);
+export default connect(mapStateToProps, { getApresentacoes, addApresentacao })(
+  Apresentacoes
+);

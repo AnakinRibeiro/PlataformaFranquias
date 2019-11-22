@@ -245,9 +245,10 @@ img {
   display: flex;
 }
 
-.bannerTitulo2 #dir div h1 {
+.bannerTitulo2 #dir div h4 {
   color: #fff;
   font-weight: 500;
+  font-size: 1.3rem;
 }
 
 .bannerTitulo2 #dir div span {
