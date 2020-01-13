@@ -220,6 +220,8 @@ img {
 .bannerTitulo2 #esq div {
   margin-left: 6rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bannerTitulo2 #esq div img {

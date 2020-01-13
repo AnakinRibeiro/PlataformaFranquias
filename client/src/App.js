@@ -7,6 +7,7 @@ import './components/dashboard/Dashboard.css';
 import './components/manuais/Manuais.css';
 import './components/marketing/apresentacoes/Apresentacoes.css';
 import './components/marketing/materiais_graficos/MateriaisGraficos.css';
+import './components/newsletter/Newsletters.css';
 
 // Components
 
@@ -23,6 +24,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
+import { Newsletters } from './components/newsletter/Newsletters';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -52,6 +54,7 @@ const App = () => {
               path='/materiais-graficos'
               component={MateriaisGraficos}
             />
+            <PrivateRoute exact path='/newsletter' component={Newsletters} />
           </Switch>
         </Fragment>
       </Router>

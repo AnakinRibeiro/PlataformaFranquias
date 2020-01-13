@@ -23,10 +23,12 @@ const Dashboard = ({ auth: { isAuthenticated } }) => {
 
       <section className='panel'>
         <div className='panelInner'>
-          <div>
-            <img src={Newsletter} alt='' />
-            <h3>Newsletter</h3>
-          </div>
+          <Link to='/newsletter'>
+            <div>
+              <img src={Newsletter} alt='' />
+              <h3>Newsletter</h3>
+            </div>
+          </Link>
 
           <div>
             <img src={Loupe} alt='' />
